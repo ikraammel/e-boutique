@@ -1,0 +1,119 @@
+.login-form {
+  width: 100%;
+  max-width: 400px;
+  margin: 80px auto;
+  padding: 40px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.login-form::before {
+  content: "Connexion";
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+  text-align: center;
+  display: block;
+}
+
+.login-form label {
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.login-form input[type="text"],
+.login-form input[type="password"] {
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 15px;
+  transition: all 0.3s ease;
+}
+
+.login-form input[type="text"]:focus,
+.login-form input[type="password"]:focus {
+  border-color: #007bff;
+  outline: none;
+  box-shadow: 0 0 4px rgba(0, 123, 255, 0.3);
+}
+
+.login-form button {
+  background-color: #007bff;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.login-form button:hover {
+  background-color: #0056b3;
+}
+
+.login-form button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.login-form p {
+  text-align: center;
+  color: red;
+  font-size: 0.9rem;
+}
+
+.login-form .password-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.login-form .password-container input {
+  width: 100%;
+  padding-right: 40px;
+}
+
+.login-form .password-toggle-icon {
+  position: absolute;
+  right: 10px;
+  cursor: pointer;
+  color: #666;
+  font-size: 18px;
+  transition: color 0.2s;
+}
+
+.login-form .password-toggle-icon:hover {
+  color: #007bff;
+}
+
+.Toastify__toast {
+  border-radius: 6px;
+  font-size: 14px;
+}
+/* Paragraphe pour le lien "Avez-vous déjà un compte ?" */
+.login-form .link-text {
+  text-align: center;
+  font-size: 0.9rem;
+  color: #333; /* couleur du texte normal */
+  margin-top: 10px;
+}
+
+/* Le lien cliquable */
+.login-form .link-text .link {
+  color: #007bff;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+/* Effet au survol */
+.login-form .link-text .link:hover {
+  color: #0056b3;
+}

@@ -1,0 +1,45 @@
+.slider-horizontal {
+  position: relative;
+  width: 100%;
+  max-width: 800px;
+  margin: 1rem auto;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+
+.slider-track {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.slider-image {
+  width: 150px;   /* taille compacte pour slider horizontal */
+  height: 150px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin: 0 10px;
+}
+
+.slider-btn {
+  background: rgba(255, 255, 255, 0.9);
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 0.2rem 0.6rem;
+  border-radius: 50%;
+  z-index: 10;
+}
+
+.slider-btn.left {
+  margin-right: 5px;
+}
+
+.slider-btn.right {
+  margin-left: 5px;
+}
+
+.slider-btn:hover {
+  background: rgba(255, 255, 255, 1);
+}

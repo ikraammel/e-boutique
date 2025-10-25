@@ -1,0 +1,341 @@
+/* Conteneur principal */
+.page {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 0 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+  text-align: center;
+}
+
+/* Nom du produit */
+.page h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  font-weight: 600;
+  color: #222;
+}
+
+/* Images du produit */
+.product-images {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.image-container {
+  position: relative;
+  display: inline-block;
+}
+
+.product-images img {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+  object-fit: contain;
+  transition: transform 0.2s;
+}
+
+.product-images img:hover {
+  transform: scale(1.03);
+}
+
+/* Boutons de suppression d'image */
+.delete-image-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: #ff4444;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 28px;
+  height: 28px;
+  font-size: 14px;
+  cursor: pointer;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.delete-image-btn:hover {
+  background: #cc0000;
+  transform: scale(1.1);
+}
+
+/* Palette de couleurs */
+.color-palette-wrapper {
+  margin: 20px 0;
+}
+
+.color-palette {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.variant-btn-wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+}
+
+.color-btn {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  border: 2px solid #ddd;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  position: relative;
+}
+
+.color-btn:hover {
+  transform: scale(1.15);
+  border-color: #666;
+  box-shadow: 0 0 8px rgba(0,0,0,0.2);
+}
+
+.color-btn.selected {
+  border: 3px solid #000;
+  transform: scale(1.2);
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+
+/* Boutons modification/suppression de variante */
+.variant-actions {
+  display: flex;
+  gap: 3px;
+  margin-top: 5px;
+}
+
+.delete-variant-btn,
+.edit-variant-btn {
+  width: 24px;
+  height: 24px;
+  border: none;
+  border-radius: 4px;
+  font-size: 12px;
+  color: white;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+
+.delete-variant-btn {
+  background: #ff4444;
+}
+
+.delete-variant-btn:hover {
+  background: #cc0000;
+  transform: scale(1.1);
+}
+
+.edit-variant-btn {
+  background: #666;
+}
+
+.edit-variant-btn:hover {
+  background: #333;
+  transform: scale(1.1);
+}
+
+/* Description & prix */
+.page p {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 10px;
+}
+
+.page p:last-of-type {
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: #e53935;
+}
+
+/* Boutons principaux */
+.btn-primary, .btn-secondary, .btn-add-to-cart {
+  border: none;
+  border-radius: 8px;
+  padding: 12px 24px;
+  font-weight: 600;
+  cursor: pointer;
+  margin: 8px;
+  transition: all 0.3s ease;
+  font-size: 1rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+/* Bouton Ajouter au panier */
+.btn-add-to-cart {
+  background: linear-gradient(135deg, #111111, #0e0c0c);
+  color: white;
+  box-shadow: 0 4px 12px rgba(255, 107, 53, 0.3);
+}
+
+.btn-add-to-cart:hover {
+  background: linear-gradient(135deg, #080808, #11100f);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(10, 10, 10, 0.4);
+}
+
+.btn-add-to-cart:active {
+  transform: translateY(0);
+}
+
+/* Bouton secondaire */
+.btn-secondary {
+  background: #6c757d;
+  color: white;
+}
+
+.btn-secondary:hover {
+  background: #5a6268;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(108, 117, 125, 0.3);
+}
+
+/* Bouton guide des tailles */
+.size-guide-btn {
+  background: #343a40;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 10px 20px;
+  cursor: pointer;
+  margin: 10px 0;
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+
+.size-guide-btn:hover {
+  background: #495057;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(52, 58, 64, 0.3);
+}
+
+/* Section tailles */
+.product-sizes {
+  margin: 25px 0;
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.size-btn {
+  padding: 10px 18px;
+  border: 2px solid #dee2e6;
+  border-radius: 6px;
+  background: white;
+  color: #333;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  min-width: 50px;
+}
+
+.size-btn:hover {
+  background: #007bff;
+  color: white;
+  border-color: #007bff;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 123, 255, 0.3);
+}
+
+.size-btn:active {
+  transform: translateY(0);
+}
+
+/* États de chargement et erreur */
+.loading, .error {
+  text-align: center;
+  padding: 40px;
+  font-size: 1.1rem;
+}
+
+.error {
+  color: #dc3545;
+}
+
+/* Placeholder pour images manquantes */
+.placeholder {
+  padding: 40px;
+  background: #f8f9fa;
+  border-radius: 10px;
+  color: #6c757d;
+  font-style: italic;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .page {
+    margin: 20px auto;
+    padding: 0 15px;
+  }
+  
+  .product-images img {
+    max-width: 100%;
+  }
+  
+  .color-palette {
+    gap: 10px;
+  }
+  
+  .btn-primary, .btn-secondary, .btn-add-to-cart {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+  }
+  
+  .size-btn {
+    padding: 8px 15px;
+    min-width: 45px;
+  }
+}
+.quantity-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px; /* espace entre les boutons et le nombre */
+  margin: 10px 0;
+}
+
+.quantity-wrapper button {
+  width: 35px;
+  height: 35px;
+  border: 1px solid #ccc;
+  background-color: #f5f5f5;
+  color: #333;
+  font-size: 20px;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.quantity-wrapper button:hover {
+  background-color: #e0e0e0;
+  border-color: #999;
+}
+
+.quantity-wrapper span {
+  font-size: 18px;
+  min-width: 25px;
+  text-align: center;
+}

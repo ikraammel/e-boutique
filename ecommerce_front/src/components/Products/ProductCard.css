@@ -1,0 +1,310 @@
+.card {
+  width: 100%;
+  max-width: 250px;   /* largeur maximale de la carte */
+  margin: 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  transition: transform 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card-image {
+  width: 100%;
+  height: 200px;             /* hauteur fixe, tu peux ajuster */
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f0f0f0; /* couleur de fond si pas d’image */
+}
+
+.card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;         /* adapte l’image à la div sans la déformer */
+}
+
+.card-body {
+  padding: 10px;
+}
+
+.card-title {
+  font-size: 1.1rem;
+  margin: 0 0 5px 0;
+}
+
+.card-price {
+  color: #28a745;
+  font-weight: bold;
+  margin: 0;
+}
+
+.placeholder {
+  color: #aaa;
+  font-size: 0.9rem;
+  text-align: center;
+}
+.card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: #fff;
+  transition: transform 0.2s, box-shadow 0.2s;
+  cursor: pointer;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.card a {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.card-image {
+  width: 100%;
+  height: 200px; /* hauteur fixe pour uniformité */
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f0f0f0;
+}
+
+.card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* remplit le conteneur sans déformer l'image */
+  transition: transform 0.3s;
+}
+
+.card-image img:hover {
+  transform: scale(1.05);
+}
+
+.placeholder {
+  font-size: 14px;
+  color: #888;
+}
+
+.card-body {
+  padding: 12px 16px;
+  text-align: center;
+}
+
+.card-body h3 {
+  font-size: 1.1rem;
+  margin: 8px 0;
+}
+
+.card-body p {
+  font-weight: bold;
+  color: #333;
+  margin: 4px 0 8px;
+}
+.admin-buttons {
+  display: flex;
+  justify-content: space-around;
+  padding: 10px;
+  background-color: #f9f9f9;
+  border-top: 1px solid #eee;
+}
+
+.admin-buttons button {
+  padding: 6px 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.admin-buttons button:hover {
+  opacity: 0.85;
+}
+
+.admin-buttons button:first-child {
+  background-color: #1976d2;
+  color: #fff;
+}
+
+.admin-buttons button:last-child {
+  background-color: #e53935;
+  color: #fff;
+}
+/* Conteneur des cartes */
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;               /* espace entre les cartes */
+  justify-content: center;  /* centre les cartes si la ligne n’est pas pleine */
+  padding: 10px;
+}
+.card.compact {
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 220px;          /* 🔹 plus compact */
+  margin: 10px;
+}
+
+.card.compact:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+}
+
+.card-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.card-image {
+  width: 100%;
+  height: 180px; /* 🔹 légèrement plus petit */
+  background-color: #f7f7f7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.card.compact:hover .card-image img {
+  transform: scale(1.04);
+}
+
+.card-body {
+  text-align: center;
+  padding: 0.7rem;
+}
+
+.card-title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #222;
+  margin-bottom: 0.3rem;
+  line-height: 1.2;
+}
+
+.card-price {
+  font-weight: bold;
+  color: #e65c00;
+  font-size: 0.95rem;
+  margin-bottom: 0.3rem;
+}
+
+/* Pastilles de couleur */
+.variant-colors {
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+  padding: 0.4rem 0;
+  flex-wrap: wrap;
+}
+
+.color-dot {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  border: 2px solid #ddd;
+  cursor: pointer;
+  transition: transform 0.2s, border-color 0.2s, box-shadow 0.2s;
+}
+
+.color-dot:hover {
+  transform: scale(1.2);
+  border-color: #555;
+}
+
+.color-dot.selected {
+  border-color: #000;
+  box-shadow: 0 0 4px rgba(0,0,0,0.4);
+}
+
+/* Bouton Ajouter au panier (noir élégant) */
+.btn-add-cart.black {
+  background-color: #000;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 12px;
+  font-weight: 600;
+  margin: 8px auto 12px;
+  display: block;
+  width: 85%;
+  transition: background-color 0.3s, transform 0.2s;
+  cursor: pointer;
+}
+
+.btn-add-cart.black:hover {
+  background-color: #222;
+  transform: scale(1.04);
+}
+
+.btn-add-cart.black:active {
+  transform: scale(0.96);
+}
+.card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.card-image img:hover {
+  transform: scale(1.03);
+}
+
+.card-image img.fade {
+  opacity: 0;
+}
+.quantity-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px; /* espace entre les boutons et le nombre */
+  margin: 10px 0;
+}
+
+.quantity-wrapper button {
+  width: 35px;
+  height: 35px;
+  border: 1px solid #ccc;
+  background-color: #f5f5f5;
+  color: #333;
+  font-size: 20px;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.quantity-wrapper button:hover {
+  background-color: #e0e0e0;
+  border-color: #999;
+}
+
+.quantity-wrapper span {
+  font-size: 18px;
+  min-width: 25px;
+  text-align: center;
+}

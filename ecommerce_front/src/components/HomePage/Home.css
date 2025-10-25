@@ -1,0 +1,48 @@
+.featured-products {
+  padding: 2rem 1rem;
+  text-align: center;
+}
+
+.featured-products h2 {
+  margin-bottom: 1.5rem;
+  font-size: 1.8rem;
+  color: #333;
+}
+
+.featured-products .grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1.5rem;
+}
+.featured-products {
+  padding: 2rem 1rem;
+  text-align: center;
+  background-color: #f8f8f8; /* léger fond pour distinguer la section */
+  border-radius: 10px;
+  margin: 2rem auto;
+  max-width: 1200px;
+}
+
+.featured-products h2 {
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
+  font-weight: 600;
+  color: #222; /* plus doux que le noir */
+}
+
+.featured-products .grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1.5rem;
+}
+
+/* Optionnel : ajouter un peu de style aux ProductCard dans la homepage */
+.featured-products .grid .product-card {
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.featured-products .grid .product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+}
+

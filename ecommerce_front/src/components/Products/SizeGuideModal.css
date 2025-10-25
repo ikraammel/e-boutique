@@ -1,0 +1,42 @@
+/* Fond semi-transparent derrière la modal */
+.size-guide-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;   /* prend toute la largeur */
+  height: 100vh;  /* prend toute la hauteur */
+  background-color: #fff; /* fond sombre semi-transparent */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10000; /* au-dessus de tout */
+  overflow: auto; /* si le contenu est trop grand */
+}
+
+/* Contenu de la modal */
+.modal-content {
+  background-color: #fff; /* blanc opaque */
+  padding: 2rem;
+  border-radius: 12px;
+  max-width: 400px;
+  width: 90%;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.25);
+  text-align: left;
+  position: relative;
+}
+
+/* Bouton fermer */
+.modal-content button {
+  display: block;
+  margin-top: 15px;
+  padding: 8px 12px;
+  border: none;
+  background-color: #222;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.modal-content button:hover {
+  background-color: #444;
+}

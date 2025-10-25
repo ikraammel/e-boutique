@@ -1,0 +1,30 @@
+.products-section {
+  padding: 2rem 1rem;
+  text-align: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.products-section h2 {
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
+  color: #222;
+}
+
+.products-section .grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* 200px min pour chaque carte */
+  gap: 1.5rem; /* espace entre les cartes */
+  justify-items: center; /* centre horizontalement les cartes */
+}
+
+.products-section .grid .product-card {
+  width: 100%;
+  max-width: 250px; /* limite la taille max de la carte */
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.products-section .grid .product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+}
