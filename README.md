@@ -18,7 +18,3 @@ This repository contains the source code for **E-Boutique**. It is part of my so
 ## Project status
 
 Portfolio / learning project. Refer to the source code for the currently implemented functionality.
-
-## Author
-
-[Ikram El Houl](https://github.com/ikraammel)
